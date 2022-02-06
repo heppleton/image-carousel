@@ -62,7 +62,7 @@ const makeImageSlider = () => {
                         autoAdvance();
                     }, 100);                
                 }
-            }, 50);
+            }, 100);
         })
     }
 
@@ -141,6 +141,8 @@ const makeImageSlider = () => {
 makeImageSlider();
 
 /*
-how to fit images of different aspect ratios?
-make select dots be as wide as the central image only? or scalle better on window resize?
+Issues:
+1. pages spin far too quickly!
+2. pictures take a while to load.
+3. no arrows??
 */
