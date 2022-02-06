@@ -62,7 +62,7 @@ const makeImageSlider = () => {
                         autoAdvance();
                     }, 100);                
                 }
-            }, 100);
+            }, 85);
         })
     }
 
