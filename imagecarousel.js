@@ -1,5 +1,5 @@
 const images = ["bay.jpg", "bridge.jpg", "galaxy.jpg", "malaga.jpg", "prague.jpg",
-    "moor.png", "nightsky.jpg", "delacroix.jpg", "paris.jpg", "park.jpg", "rocks.jpg", "shuttle.jpg",
+    "nightsky.jpg", "delacroix.jpg", "paris.jpg", "park.jpg", "rocks.jpg", "shuttle.jpg",
     "vaporwave.jpg", "woodland.jpg", "monalisa.jpg"];
 
 const makeImageSlider = () => {
@@ -62,7 +62,7 @@ const makeImageSlider = () => {
                         autoAdvance();
                     }, 100);                
                 }
-            }, 100);
+            }, 250);
         })
     }
 
@@ -139,10 +139,3 @@ const makeImageSlider = () => {
 }
 
 makeImageSlider();
-
-/*
-Issues:
-1. pages spin far too quickly!
-2. pictures take a while to load.
-3. no arrows??
-*/
