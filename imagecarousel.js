@@ -133,6 +133,14 @@ const makeImageSlider = () => {
         }, 2500);    
     }
 
+    const preloadImages = () => {
+        images.forEach(image => {
+            let img = new Image();
+            img.src = `./pics/${image}`;
+        })
+    }
+
+    preloadImages();
     loadSeven();
     autoAdvance();
 
