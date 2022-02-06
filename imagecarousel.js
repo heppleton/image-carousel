@@ -27,7 +27,7 @@ const makeImageSlider = () => {
     leftButton.addEventListener("mouseover", () => {
         clearInterval(intervalID);
         backwardFrame();
-        intervalID = setInterval(backwardFrame, 1000);
+        intervalID = setInterval(backwardFrame, 900);
     });
     leftButton.addEventListener("mouseleave", () => {
         autoAdvance();
@@ -38,7 +38,7 @@ const makeImageSlider = () => {
     rightButton.addEventListener("mouseover", () => {
         clearInterval(intervalID);
         forwardFrame();
-        intervalID = setInterval(forwardFrame, 1000);
+        intervalID = setInterval(forwardFrame, 900);
     });
     rightButton.addEventListener("mouseleave", () => {
         autoAdvance();
@@ -62,7 +62,7 @@ const makeImageSlider = () => {
                         autoAdvance();
                     }, 100);                
                 }
-            }, 150);
+            }, 100);
         })
     }
 
