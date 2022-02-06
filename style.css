@@ -1,0 +1,136 @@
+:root {
+    --transition-timer: 1s;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.control-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    overflow: hidden;
+    width: 90vw;
+    height: calc(40vw * 0.75);
+}
+
+.button-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    opacity: 0;
+}
+
+.button-area:hover {
+    opacity: 0.5;
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.button-area:first-of-type::after {
+    content: url("./svg/left.svg");
+    transform: scale(3);
+}
+
+.button-area:nth-last-of-type(2)::after {
+    content: url("./svg/right.svg");
+    transform: scale(3);
+}
+
+.select-box {
+    grid-column: 1 / span 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: #555;
+    letter-spacing: 1.5vw;
+}
+
+.select-box span {
+    cursor: pointer;
+}
+
+.select-box span:hover {
+    color: orangered;
+}
+
+.highlighted {
+    color: orange;
+}
+
+.slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(30vw * 0.75);
+    width: 30vw;
+    position: relative;
+}
+
+.slider-frame {
+    position: absolute;
+    perspective: 200px;
+    height: calc(30vw * 0.75);
+    width: 30vw;
+    transition: transform var(--transition-timer) ease-in-out
+}
+
+.slider-frame:first-child {
+    transform: translateX(-150%);
+}
+
+.slider-frame:nth-child(2) {
+    transform: translateX(-140%);
+}
+
+.slider-frame:nth-child(3) {
+    transform: translateX(-100%);
+}
+
+.slider-frame:nth-last-child(3) {
+    transform: translateX(100%);
+}
+
+.slider-frame:nth-last-child(2) {
+    transform: translateX(140%);
+}
+
+.slider-frame:last-child {
+    transform: translateX(150%);
+}
+
+.slider-image {
+    height: 100%;
+    width: 100%;
+    object-fit: scale-down;
+    transition: transform var(--transition-timer) ease-in-out;
+}
+
+.slider-frame:first-child .slider-image {
+    transform: rotateY(-90deg) scale(0);
+}
+
+.slider-frame:nth-child(2) .slider-image {
+    transform: rotateY(-45deg) scale(0.25);
+}
+
+.slider-frame:nth-child(3) .slider-image {
+    transform: rotateY(-20deg) scale(0.60);
+}
+
+.slider-frame:nth-last-child(3) .slider-image {
+    transform: rotateY(20deg) scale(0.60);
+}
+
+.slider-frame:nth-last-child(2) .slider-image {
+    transform: rotateY(45deg) scale(0.25);
+}
+
+.slider-frame:last-child .slider-image {
+    transform: rotateY(90deg) scale(0);
+}
